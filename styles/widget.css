@@ -1,0 +1,115 @@
+body {
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #0a0a0a;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI",
+    Roboto, sans-serif;
+}
+
+.widget {
+  width: 800px;
+  height: 400px;
+  background: linear-gradient(145deg, #1a1a1a, #2a2a2a);
+  border-radius: 30px;
+  padding: 32px;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 32px;
+  position: relative;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+}
+
+.car-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 380px;
+  z-index: 1;
+}
+
+.header {
+  margin-bottom: 24px;
+}
+
+.model {
+  color: #ffffff;
+  font-size: 32px;
+  font-weight: 700;
+  margin: 0 0 8px 0;
+  letter-spacing: -0.5px;
+}
+
+.year {
+  color: #666;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.status-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.status-item {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 16px;
+  border-radius: 16px;
+  transition: transform 0.2s;
+}
+
+.status-item:hover {
+  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.status-label {
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.status-value {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.status-value.warning {
+  color: #ff9500;
+}
+
+.status-value.danger {
+  color: #ff3b30;
+}
+
+.car-visual {
+  position: absolute;
+  right: 0%;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 60%;
+  height: 90%;
+}
+
+.car-image {
+  width: 130%;
+  height: 110%;
+  object-fit: contain;
+  object-position: left center;
+}
+
+.last-updated {
+  position: absolute;
+  top: 32px;
+  right: 32px;
+  color: #666;
+  font-size: 14px;
+}
